@@ -1,0 +1,24 @@
+body.pagina { display: block; padding: 20px; max-width: 700px; margin: 0 auto; }
+.barra { display: flex; justify-content: space-between; align-items: center; }
+.barra h1 { font-size: 22px; }
+.barra button { padding: 8px 14px; border: none; border-radius: 8px;
+                background: #e0e6ef; cursor: pointer; }
+.resumen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0; }
+.tarjeta { background: white; padding: 14px; border-radius: 12px; text-align: center;
+           box-shadow: 0 2px 10px rgba(0,0,0,0.08); display: flex; flex-direction: column; gap: 6px; }
+.tarjeta span { font-size: 13px; color: #667; }
+.tarjeta strong { font-size: 18px; }
+.panel { background: white; padding: 18px; border-radius: 12px; margin-bottom: 16px;
+         box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.panel h2 { margin-top: 0; font-size: 18px; }
+select { padding: 10px; border: 1px solid #ccd; border-radius: 8px; }
+.item { display: flex; align-items: center; gap: 10px; padding: 10px 0;
+        border-bottom: 1px solid #eee; }
+.item .icono { font-size: 22px; }
+.item .info { flex: 1; }
+.item .info small { color: #889; }
+.item .valor { font-weight: bold; }
+.item .valor.gasto { color: #d33; }
+.item .valor.ingreso { color: #2a9d4b; }
+.item button { border: none; background: none; cursor: pointer; font-size: 16px; }
+.vacio { color: #889; text-align: center; }

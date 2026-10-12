@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi App de Finanzas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="caja">
+    <h1>💰 Mi App de Finanzas</h1>
+
+    <div class="pestanas">
+      <button id="btnLogin" class="activa">Iniciar sesión</button>
+      <button id="btnRegistro">Registrarme</button>
+    </div>
+
+    <form id="formLogin">
+      <input type="email" id="loginCorreo" placeholder="Correo" required>
+      <input type="password" id="loginContrasena" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <form id="formRegistro" class="oculto">
+      <input type="text" id="regNombre" placeholder="Nombre" required>
+      <input type="email" id="regCorreo" placeholder="Correo" required>
+      <input type="password" id="regContrasena" placeholder="Contraseña" required>
+      <button type="submit">Crear cuenta</button>
+    </form>
+
+    <p id="mensaje"></p>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>

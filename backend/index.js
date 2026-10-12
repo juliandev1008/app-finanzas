@@ -2,6 +2,12 @@ const express = require('express');
 const pool = require('./db');
 
 const app = express();
+app.use(require('cors')());
+app.use(express.json());
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/categorias', require('./routes/categorias'));
+app.use('/api/transacciones', require('./routes/transacciones'));
+app.use('/api/presupuesto', require('./routes/presupuesto'));
 const PUERTO = 3000;
 
 app.get('/', (req, res) => {

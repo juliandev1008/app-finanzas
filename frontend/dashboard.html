@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Dashboard</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="avatar.css">
+</head>
+<body class="pagina">
+  <header class="barra">
+    <h1 id="saludo"></h1>
+    <button id="btnSalir">Cerrar sesión</button>
+  </header>
+
+  <section class="avatar-zona">
+    <div class="avatar-contenedor">
+      <div id="avatar" class="avatar">🐱</div>
+      <select id="selectorAvatar" title="Cambiar avatar">
+        <option value="gato">Gato</option>
+        <option value="mono">Mono</option>
+        <option value="persona">Persona</option>
+      </select>
+    </div>
+    <div class="globo">
+      <p id="globoTexto"></p>
+      <div id="globoBotones" class="globo-botones"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Presupuesto mensual</h2>
+    <form id="formPresupuesto" class="fila">
+      <input type="number" id="presupuestoInput" placeholder="¿Cuánto quieres gastar al mes?" min="0" step="any" required>
+      <button type="submit">Guardar</button>
+    </form>
+    <div class="barra-progreso"><div id="progreso"></div></div>
+    <small id="progresoTexto"></small>
+  </section>
+
+  <section class="resumen">
+    <div class="tarjeta"><span>Ingresos</span><strong id="totalIngresos">$0</strong></div>
+    <div class="tarjeta"><span>Gastos</span><strong id="totalGastos">$0</strong></div>
+    <div class="tarjeta"><span>Balance</span><strong id="balance">$0</strong></div>
+  </section>
+
+  <section class="panel">
+    <h2>Nuevo movimiento</h2>
+    <form id="formTransaccion">
+      <select id="tipo">
+        <option value="gasto">Gasto</option>
+        <option value="ingreso">Ingreso</option>
+      </select>
+      <select id="categoria" required></select>
+      <input type="number" id="monto" placeholder="Monto" min="1" step="any" required>
+      <input type="text" id="descripcion" placeholder="Descripción (opcional)">
+      <input type="date" id="fecha" required>
+      <button type="submit">Guardar</button>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Mis movimientos</h2>
+    <div id="lista"></div>
+  </section>
+
+  <script src="avatar.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
